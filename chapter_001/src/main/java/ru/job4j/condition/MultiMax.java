@@ -15,12 +15,7 @@ public class MultiMax {
      * @return максимума.
      */
     public int max(int first, int second, int third) {
-        if (first >= second && first >= third) {
-            return first;
-        } else if (second >= first && second >= third) {
-            return second;
-        } else {
-            return third;
-        }
+        int result = first > second ? first : second;
+        return result > third ? result : third;
     }
 }
