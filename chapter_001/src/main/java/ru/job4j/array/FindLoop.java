@@ -8,7 +8,7 @@ package ru.job4j.array;
 
 public class FindLoop {
     /**
-     * Метод calculate заполняет массив числами, возведенными в квадрат.
+     * Метод indexOf выполняет поиск числа в массиве.
      *
      * @param data входящий массив.
      * @param el число, которое нужно найти.
@@ -17,6 +17,26 @@ public class FindLoop {
     public int indexOf(int[] data, int el) {
         int rst = -1; // если элемента нет в массиве, то возвращаем -1.
         for (int index = 0; index != data.length; index++) {
+            if (data[index] == el) {
+                rst = index;
+                break;
+            }
+        }
+        return rst;
+    }
+
+    /**
+     * Метод indexOfLimit выполняет поиск числа в заданном диапазоне массива.
+     *
+     * @param data входящий массив.
+     * @param el число, которое нужно найти.
+     * @param start начальное число диапазона.
+     * @param finish конечное число диапазона.
+     * @return индекс найденного числа.
+     */
+    public int indexOfLimit(int[] data, int el, int start, int finish) {
+        int rst = -1; // если элемента нет в массиве, то возвращаем -1.
+        for (int index = start; index <= finish; index++) {
             if (data[index] == el) {
                 rst = index;
                 break;
