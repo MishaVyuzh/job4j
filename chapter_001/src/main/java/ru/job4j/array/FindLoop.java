@@ -11,7 +11,7 @@ public class FindLoop {
      * Метод indexOf выполняет поиск числа в массиве.
      *
      * @param data входящий массив.
-     * @param el число, которое нужно найти.
+     * @param el   число, которое нужно найти.
      * @return индекс найденного числа.
      */
     public int indexOf(int[] data, int el) {
@@ -28,9 +28,9 @@ public class FindLoop {
     /**
      * Метод indexOfLimit выполняет поиск числа в заданном диапазоне массива.
      *
-     * @param data входящий массив.
-     * @param el число, которое нужно найти.
-     * @param start начальное число диапазона.
+     * @param data   входящий массив.
+     * @param el     число, которое нужно найти.
+     * @param start  начальное число диапазона.
      * @param finish конечное число диапазона.
      * @return индекс найденного числа.
      */
@@ -43,5 +43,35 @@ public class FindLoop {
             }
         }
         return rst;
+    }
+
+    /**
+     * Метод sort выполняет сортировку массива выбором.
+     *
+     * @param data входящий массив.
+     * @return отсортированный массив.
+     */
+    public int[] sort(int[] data) {
+        FindLoop find = new FindLoop();
+        int el = Integer.MIN_VALUE;
+        int start = 0;
+        int finish = data.length - 1;
+        int min;
+        int tmp;
+
+        for (int index = 0; index != data.length; index++) {
+            min = -1;
+            while (min == -1) {
+                min = find.indexOfLimit(data, el, start, finish);
+                el++;
+            }
+            tmp = data[index];
+            data[index] = data[min];
+            data[min] = tmp;
+
+            el = data[index];
+            start++;
+        }
+        return data;
     }
 }
