@@ -53,12 +53,17 @@ public class FindLoop {
      */
     public int[] sort(int[] data) {
         FindLoop find = new FindLoop();
-        int el = Integer.MIN_VALUE;
+        int el = Integer.MAX_VALUE;
         int start = 0;
         int finish = data.length - 1;
         int min;
         int tmp;
 
+        for (int i = 0; i != data.length; i++) {
+            if (data[i] < el) {
+                el = data[i];
+            }
+        }
         for (int index = 0; index != data.length; index++) {
             min = -1;
             while (min == -1) {
