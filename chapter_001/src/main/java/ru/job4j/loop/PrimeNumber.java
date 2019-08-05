@@ -17,7 +17,7 @@ public class PrimeNumber {
     public int calc(int finish) {
         int count = 0;
         boolean check;
-        for (int i = 2; i <= finish; i++){
+        for (int i = 2; i <= finish; i++) {
             check = false;
             for (int j = 2; j < i; j++) {
                 if (i % j == 0) {

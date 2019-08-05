@@ -68,7 +68,7 @@ public class FindLoopTest {
     public void whenSort5() {
         FindLoop find = new FindLoop();
         int[] input = new int[] {3, 4, 1, 2, 5};
-        int result[] = find.sort(input);
+        int[] result = find.sort(input);
         int[] expect = new int[] {1, 2, 3, 4, 5};
         assertThat(result, is(expect));
     }
@@ -76,7 +76,7 @@ public class FindLoopTest {
     public void whenSort10() {
         FindLoop find = new FindLoop();
         int[] input = new int[] {3, 4, 1, 2, 5, -12345, 555555, 0, -700, 8008008};
-        int result[] = find.sort(input);
+        int[] result = find.sort(input);
         int[] expect = new int[] {-12345, -700, 0, 1, 2, 3, 4, 5, 555555, 8008008};
         assertThat(result, is(expect));
     }

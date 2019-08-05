@@ -20,7 +20,7 @@ public class SquareTest {
         assertThat(rst, is(expect));
     }
     @Test
-    public void whenBound7Then149_16_25_36_49() {
+    public void whenBound7Then14916253649() {
         int bound = 7;
         Square square = new Square();
         int[] rst = square.calculate(bound);

@@ -19,7 +19,7 @@ public class Fitness {
     public int calc(int ivan, int nikolai) {
         int month = 0;
 
-        while(ivan < nikolai) {
+        while (ivan < nikolai) {
             ivan *= 3;
             nikolai *= 2;
             month++;

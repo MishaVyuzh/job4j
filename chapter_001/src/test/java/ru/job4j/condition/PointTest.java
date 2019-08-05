@@ -11,7 +11,7 @@ public class PointTest {
         int inx2 = 2;
         int iny2 = 0;
         int expected = 2;
-        int out = (int)Math.round(Point.distance(inx1, iny1, inx2, iny2));
+        int out = (int) Math.round(Point.distance(inx1, iny1, inx2, iny2));
         Assert.assertEquals(expected, out);
     }
     @Test
@@ -21,7 +21,7 @@ public class PointTest {
         int inx2 = 2;
         int iny2 = 0;
         int expected = 5;
-        int out = (int)Math.round(Point.distance(inx1, iny1, inx2, iny2));
+        int out = (int) Math.round(Point.distance(inx1, iny1, inx2, iny2));
         Assert.assertEquals(expected, out);
     }
     @Test
@@ -31,7 +31,7 @@ public class PointTest {
         int inx2 = 28;
         int iny2 = 75;
         int expected = 53;
-        int out = (int)Math.round(Point.distance(inx1, iny1, inx2, iny2));
+        int out = (int) Math.round(Point.distance(inx1, iny1, inx2, iny2));
         Assert.assertEquals(expected, out);
     }
     @Test
@@ -41,7 +41,7 @@ public class PointTest {
         int inx2 = 0;
         int iny2 = 0;
         int expected = 0;
-        int out = (int)Math.round(Point.distance(inx1, iny1, inx2, iny2));
+        int out = (int) Math.round(Point.distance(inx1, iny1, inx2, iny2));
         Assert.assertEquals(expected, out);
     }
     @Test
@@ -51,7 +51,7 @@ public class PointTest {
         int inx2 = 17;
         int iny2 = 0;
         int expected = 5;
-        int out = (int)Math.round(Point.distance(inx1, iny1, inx2, iny2));
+        int out = (int) Math.round(Point.distance(inx1, iny1, inx2, iny2));
         Assert.assertEquals(expected, out);
     }
 }

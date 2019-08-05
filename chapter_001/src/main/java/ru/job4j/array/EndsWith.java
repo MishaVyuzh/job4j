@@ -11,7 +11,7 @@ public class EndsWith {
      * Метод startsWith проверяет, что слово начинается с префикса.
      * @param word входящее слово.
      * @param post префикс.
-     * @return true если слово начинаеться с префикса
+     * @return true если слово начинаеться с префикса.
      */
     public boolean endsWith(String word, String post) {
         boolean result = true;

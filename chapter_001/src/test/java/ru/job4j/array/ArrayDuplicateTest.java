@@ -20,7 +20,7 @@ public class ArrayDuplicateTest {
         assertThat(result, arrayContainingInAnyOrder(except));
     }
     @Test
-    public void RemoveDuplicateThenAllEqual() {
+    public void whenRemoveDuplicateThenAllEqual() {
         String[] input = {"Ball", "Ball", "Ball", "Ball"};
         String[] except = {"Ball"};
         ArrayDuplicate duplicate = new ArrayDuplicate();
