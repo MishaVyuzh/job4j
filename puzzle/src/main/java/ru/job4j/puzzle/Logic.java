@@ -76,6 +76,7 @@ public class Logic {
             }
             if (checkCol == table.length || checkRow == table.length) {
                 result = true;
+                break;
             }
         }
         return result;
