@@ -14,13 +14,9 @@ import static org.junit.Assert.*;
 public class TriangleTest {
     @Test
     public void whenAreaSetThreePointsThenTriangleArea() {
-        // Создаем объект треугольник.
         Triangle triangle = new Triangle();
-        // Вычисляем площадь.
         double result = triangle.area(3, 1, 5, 1, 4, 0);
-        // Задаем ожидаемый результат.
         double expected = 1;
-        //Проверяем результат и ожидаемое значение.
         assertThat(result, closeTo(expected, 0.1));
     }
 }

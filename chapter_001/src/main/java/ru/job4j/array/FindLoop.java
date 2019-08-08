@@ -15,7 +15,7 @@ public class FindLoop {
      * @return индекс найденного числа.
      */
     public int indexOf(int[] data, int el) {
-        int rst = -1; // если элемента нет в массиве, то возвращаем -1.
+        int rst = -1;
         for (int index = 0; index != data.length; index++) {
             if (data[index] == el) {
                 rst = index;
@@ -35,7 +35,7 @@ public class FindLoop {
      * @return индекс найденного числа.
      */
     public int indexOfLimit(int[] data, int el, int start, int finish) {
-        int rst = -1; // если элемента нет в массиве, то возвращаем -1.
+        int rst = -1;
         for (int index = start; index <= finish; index++) {
             if (data[index] == el) {
                 rst = index;
@@ -52,17 +52,17 @@ public class FindLoop {
      * @return отсортированный массив.
      */
     public int[] sort(int[] data) {
-        for (int i = 0; i < data.length; i++) {
+        for (int pos = 0; pos < data.length; pos++) {
             int min = Integer.MAX_VALUE;
 
-            for (int k = i; k < data.length; k++) {
-                if (data[k] < min) {
-                    min = data[k];
+            for (int index = pos; index < data.length; index++) {
+                if (data[index] < min) {
+                    min = data[index];
                 }
             }
-            int index = this.indexOfLimit(data, min, i, data.length - 1);
-            int tmp = data[i];
-            data[i] = data[index];
+            int index = this.indexOfLimit(data, min, pos, data.length - 1);
+            int tmp = data[pos];
+            data[pos] = data[index];
             data[index] = tmp;
         }
         return data;
