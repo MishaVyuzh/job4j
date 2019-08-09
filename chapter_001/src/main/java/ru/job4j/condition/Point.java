@@ -1,21 +1,24 @@
 package ru.job4j.condition;
 
 public class Point {
-    public static double distance(int x1, int y1, int x2, int y2) {
-        return Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
+    private int x;
+    private int y;
+
+    /**
+     * Конструктор, который принимает начальное состояние объекта "точка"
+     * @param first координата x
+     * @param second координата y
+     */
+    public Point(int first, int second) {
+        this.x = first;
+        this.y = second;
     }
 
-    public static void main(String[] args) {
-        double result = distance(0, 0, 2, 0);
-        System.out.println("result (0, 0) to (2, 0) " + result);
-        result = distance(1, 5, 2, 0);
-        System.out.println("result (1, 5) to (2, 0) " + result);
-        result = distance(50, 123, 28, 75);
-        System.out.println("result (50, 123) to (28, 75) " + result);
-        result = distance(0, 0, 0, 0);
-        System.out.println("result (0, 0) to (0, 0) " + result);
-        result = distance(12, 0, 17, 0);
-        System.out.println("result (12, 0) to (17, 0) " + result);
+    public double distance(Point finish) {
+        return Math.sqrt(Math.pow((this.x - finish.x), 2) + Math.pow((this.y - finish.y), 2));
+    }
 
+    public void info() {
+        System.out.println(String.format("Point[%s, %s]", this.x, this.y));
     }
 }
