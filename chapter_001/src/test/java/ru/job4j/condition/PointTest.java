@@ -43,6 +43,16 @@ public class PointTest {
         assertThat(result, is(5D));
     }
     @Test
+    public void whenDistance3DThenNine() {
+        Point start = new Point(-7, -2, 4);
+        Point finish = new Point(1, 2, 3);
+        double result = start.distance3d(finish);
+        start.info3();
+        finish.info3();
+        System.out.println(String.format("Result is %s", result));
+        assertThat(result, is(9D));
+    }
+    @Test
     public void whenShowInfo() {
         Point first = new Point(1, 1);
         first.info();
