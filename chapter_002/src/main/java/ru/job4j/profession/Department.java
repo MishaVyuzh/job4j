@@ -1,4 +1,4 @@
 package ru.job4j.profession;
 
-public class Department extends Profession{
+public class Department extends Profession {
 }

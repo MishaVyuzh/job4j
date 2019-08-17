@@ -18,7 +18,8 @@ public class Doctor extends Profession {
     }
 
     public boolean checkStudent(int age) {
-        return  this.student = age < 23;
+        this.student = age < 23;
+        return this.student;
     }
 
     public String getDepartment() {
@@ -29,7 +30,7 @@ public class Doctor extends Profession {
         return this.category;
     }
 
-    public boolean getStudent() {
+    public boolean getStudent()  {
         return this.student;
     }
 }
