@@ -99,7 +99,6 @@ public class StartUI {
      */
     private void showItems() {
         Item[] items = this.tracker.findAll();
-
         if (items.length > 0) {
             System.out.println("------------ Список всех заявок --------------");
             for (Item item : items) {
@@ -194,7 +193,7 @@ public class StartUI {
      */
     private void showMenu() {
         System.out.println("------------ Меню ------------");
-        System.out.println("0 - Добавиить заявку");
+        System.out.println("0 - Добавить заявку");
         System.out.println("1 - Вывод заявок на экран");
         System.out.println("2 - Редактировать заявку");
         System.out.println("3 - Удалить заявку");
