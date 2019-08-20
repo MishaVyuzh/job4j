@@ -6,20 +6,16 @@ package ru.job4j.pseudo;
  * @since 19.08.2019
  */
 
-public class Triangle implements Shape{
+public class Triangle implements Shape {
     @Override
     public String draw() {
         StringBuilder pic = new StringBuilder();
-        pic.append("     *     ");
-        pic.append("    * *    ");
-        pic.append("   *   *   ");
-        pic.append("  *     *  ");
-        pic.append(" *       * ");
-        pic.append("***********");
+        pic.append("     *     " + "\r\n")
+            .append("    * *    " + "\r\n")
+            .append("   *   *   " + "\r\n")
+            .append("  *     *  " + "\r\n")
+            .append(" *       * " + "\r\n")
+            .append("***********");
         return pic.toString();
-    }
-
-    public static void main(String[] args) {
-
     }
 }

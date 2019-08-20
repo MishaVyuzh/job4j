@@ -19,10 +19,10 @@ public class SquareTest {
                 square.draw(),
                 is(
                         new StringBuilder()
-                                .append("#####")
-                                .append("#   #")
-                                .append("#   #")
-                                .append("#   #")
+                                .append("#####" + "\r\n")
+                                .append("#   #" + "\r\n")
+                                .append("#   #" + "\r\n")
+                                .append("#   #" + "\r\n")
                                 .append("#####")
                                 .toString()
                 )
