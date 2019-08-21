@@ -26,6 +26,7 @@ public class StartUITest {
     private Input input3 = new StubInput(new String[]{"3", def.getId(), "6"});
     private Input input4 = new StubInput(new String[]{"4", def.getId(), "6"});
     private Input input5 = new StubInput(new String[]{"5", first.getName(), "6"});
+    private Input input6 = new StubInput(new String[]{"5", third.getName(), "6"});
     private String menu = "------------ Меню ------------"
             + "\r\n" + "0 - Добавить заявку"
             + "\r\n" + "1 - Вывод заявок на экран"
@@ -85,7 +86,7 @@ public class StartUITest {
     }
 
     @Test
-    public void whenShowAllItems() {
+    public void whenShowFindAllItems() {
         new StartUI(input1, tracker).init();
         StringBuilder output = new StringBuilder();
         output
@@ -102,5 +103,43 @@ public class StartUITest {
                         .toString()
                 )
         );
+    }
+
+    @Test
+    public void whenShowFindByIdThenTrackerHasItem() {
+        // создаём StartUI и вызываем метод init()
+        new StartUI(input4, tracker).init();
+        StringBuilder output = new StringBuilder();
+        // проверяем, что нулевой элемент массива в трекере содержит id, введённое при эмуляции.
+        assertThat(new String(out.toByteArray()), is(output
+                .append(menu)
+                .append("\r\n" + "------------ Поиск заявки по id --------------" + "\r\n")
+                .append(String.format("ID - %s | Имя - %s | Описание - %s \r\n\r\n",
+                        tracker.findAll()[0].getId(),
+                        tracker.findAll()[0].getName(),
+                        tracker.findAll()[0].getDesc()))
+                .append(menu)
+                .append(System.lineSeparator())
+                .toString()
+        ));
+    }
+
+    @Test
+    public void whenShowFindByNameThenTrackerReturnItems() {
+        // создаём StartUI и вызываем метод init()
+        new StartUI(input6, tracker).init();
+        StringBuilder output = new StringBuilder();
+        // проверяем, что нулевой элемент массива в трекере содержит id, введённое при эмуляции.
+        assertThat(new String(out.toByteArray()), is(output
+                .append(menu)
+                .append("\r\n" + "------------ Поиск заявки по имени --------------" + "\r\n")
+                .append(String.format("ID - %s | Имя - %s | Описание - %s \r\n\r\n",
+                        tracker.findAll()[3].getId(),
+                        tracker.findAll()[3].getName(),
+                        tracker.findAll()[3].getDesc()))
+                .append(menu)
+                .append(System.lineSeparator())
+                .toString()
+        ));
     }
 }
