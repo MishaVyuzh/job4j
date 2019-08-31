@@ -53,14 +53,6 @@ public class MenuTracker {
     }
 
     /**
-     * Метод для получения длины массива действий в меню
-     *
-     * @return длину массива
-     */
-    public int getActionsLength() {
-        return this.actions.size();
-    }
-    /**
      * Метод заполняет массив.
      */
     public void fillActions() {
