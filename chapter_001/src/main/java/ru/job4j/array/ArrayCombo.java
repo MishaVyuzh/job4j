@@ -1,6 +1,5 @@
 package ru.job4j.array;
 
-
 import java.util.Arrays;
 
 /**
@@ -10,8 +9,13 @@ import java.util.Arrays;
  */
 
 public class ArrayCombo {
-
-    int[] merge(int[] left, int[] right) {
+    /**
+     * Метод merge объединяет и сортирует два отсортированных массива.
+     * @param left первый отсортированный массив.
+     * @param right второй отсортированный массив.
+     * @return отсортированный массив.
+     */
+    public int[] merge(int[] left, int[] right) {
         int[] combo = new int[left.length + right.length];
         int l = 0, r = 0;
 
@@ -25,13 +29,14 @@ public class ArrayCombo {
                 combo[i] = left[l];
                 l++;
             } else if (l < left.length && r < right.length) {
-                if (left[l] < right[r]) {
+                combo[i] = left[l] < right[r] ? left[l++] : right[r++];
+                /*if (left[l] < right[r]) {
                     combo[i] = left[l];
                     l++;
                 } else {
                     combo[i] = right[r];
-                    r++;
-                }
+                    r++;*/
+                //}
             }
         }
         return combo;
