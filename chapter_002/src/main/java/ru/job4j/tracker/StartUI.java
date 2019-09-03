@@ -49,7 +49,7 @@ public class StartUI {
      */
     //private final Tracker tracker;
 
-    public StartUI(Input input) {
+    public StartUI(Input input, Tracker tracker) {
         this.input = input;
     }
 
@@ -224,10 +224,13 @@ public class StartUI {
      * Запускт программы.
      * @param args
      */
-
     public static void main(String[] args) {
-        Input input = new ValidateInput();
-        new StartUI(input).init();
+        new StartUI(
+                new ValidateInput(
+                        new ConsoleInput()
+                ),
+                new Tracker()
+        ).init();
     }
     /*public static void main(String[] args) {
         new StartUI(new ConsoleInput(), new Tracker()).init();
