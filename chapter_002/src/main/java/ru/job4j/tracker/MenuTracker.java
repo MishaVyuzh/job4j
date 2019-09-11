@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * Внешний класс, добавляющий итем
  */
-class AddItem extends BaseAction {
+class  AddItem extends BaseAction {
 
     public AddItem(int key, String name) {
         super(key, name);
@@ -58,14 +58,14 @@ public class MenuTracker {
     /**
      * Метод заполняет массив.
      */
-    public void fillActions() {
+    public void fillActions(StartUI ui) {
         this.actions.add(new AddItem(0, "Добавить заявку"));
         this.actions.add(new ShowItems(1, "Выыод заявок на экран"));
         this.actions.add(new EditItems(2, "Редактировать заявку"));
         this.actions.add(new DeleteItem(3, "Удалить заявку"));
         this.actions.add(new FindItemById(4, "Поиск заявки по id"));
         this.actions.add(new FindItemsByName(5, "Поиск заявки по имени"));
-        this.actions.add(new ExitProgram(6, "Выход"));
+        this.actions.add(new ExitProgram(6, "Выход", ui));
     }
 
     /**
@@ -208,13 +208,16 @@ public class MenuTracker {
 
     private static class ExitProgram extends BaseAction {
 
-        public ExitProgram(int key, String name) {
+        private final StartUI ui;
+
+        public ExitProgram(int key, String name, StartUI ui) {
             super(key, name);
+            this.ui = ui;
         }
 
         @Override
         public void execute(Input input, Tracker tracker) {
-
+            this.ui.stop();
         }
     }
 }
