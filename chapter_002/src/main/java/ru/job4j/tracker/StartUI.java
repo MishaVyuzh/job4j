@@ -14,6 +14,7 @@ public class StartUI {
      * Получение данных от пользователя.
      */
     private final Input input;
+    private Tracker tracker = new Tracker();
 
     private boolean exit = true;
 
@@ -32,10 +33,9 @@ public class StartUI {
         /**
          * Хранилище заявок.
          */
-        Tracker tracker = new Tracker();
-        MenuTracker menu = new MenuTracker(this.input, tracker);
-        List<Integer> range = new ArrayList<>();
+        MenuTracker menu = new MenuTracker(this.input, this.tracker);
         menu.fillActions(this);
+        List<Integer> range = new ArrayList<>();
         for (int i = 0; i < menu.getActionsLength(); i++) {
             range.add(i);
         }

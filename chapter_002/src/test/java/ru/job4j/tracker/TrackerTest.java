@@ -1,6 +1,9 @@
 package ru.job4j.tracker;
 
 import org.junit.Test;
+
+import java.util.List;
+
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
@@ -26,7 +29,7 @@ public class TrackerTest {
         // Проставляем старый id из previous, который был сгенерирован выше.
         next.setId(previous.getId());
         // Обновляем заявку в трекере.
-        tracker.replace(previous.getId(), next);
+        tracker.replace(next);
         // Проверяем, что заявка с таким id имеет новые имя test2.
         assertThat(tracker.findById(previous.getId()).getName(), is("test2"));
     }
@@ -40,8 +43,8 @@ public class TrackerTest {
         tracker.add(first);
         tracker.add(second);
         String firstId = first.getId();
-        tracker.delete(firstId);
-        Item[] items = tracker.findAll();
+        tracker.delete(first);
+        List<Item> items = tracker.findAll();
         boolean result = true;
         for (Item item : items) {
             if (item.getId().equals(firstId)) {
@@ -60,7 +63,7 @@ public class TrackerTest {
         Item second = new Item("test2", "testDescription2", created);
         tracker.add(first);
         tracker.add(second);
-        Item[] expect = {first, second};
+        List<Item> expect = List.of(first, second);
         assertThat(tracker.findAll(), is(expect));
     }
 
@@ -74,7 +77,7 @@ public class TrackerTest {
         tracker.add(first);
         tracker.add(second);
         tracker.add(third);
-        assertThat(tracker.findByName("test1"), is(new Item[] {first, third}));
+        assertThat(tracker.findByName("test1"), is(List.of(first, third)));
     }
 
     @Test

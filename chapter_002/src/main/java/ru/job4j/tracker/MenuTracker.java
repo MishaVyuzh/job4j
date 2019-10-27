@@ -95,8 +95,9 @@ public class MenuTracker {
 
         @Override
         public void execute(Input input, Tracker tracker) {
-            Item[] items = tracker.findAll();
-            if (items.length > 0) {
+            List<Item> items = tracker.findAll();
+            if (items.size() > 0) {
+
                 System.out.println("------------ Список всех заявок --------------");
                 for (Item item : items) {
                     System.out.print("ID - " + item.getId() + " | ");
@@ -128,7 +129,7 @@ public class MenuTracker {
             String descReplace = input.ask("Введите описание новой заявки :");
             Item item = new Item(nameReplace, descReplace);
 
-            if (tracker.replace(id, item)) {
+            if (tracker.replace(item)) {
                 System.out.println("------------ Новая заявка с Id : " + item.getId() + " -----------");
                 System.out.println();
             } else  {
@@ -148,7 +149,7 @@ public class MenuTracker {
         public void execute(Input input, Tracker tracker) {
             System.out.println("------------ Удаление заявки --------------");
             String id = input.ask("Введите id заявки, которую вы хотите удалить");
-            if (tracker.delete(id)) {
+            if (tracker.delete(tracker.findById(id))) {
                 System.out.println("------------ Новая заявка с Id : " + id + " успешно удалена -----------");
                 System.out.println();
             } else {
@@ -191,7 +192,7 @@ public class MenuTracker {
         public void execute(Input input, Tracker tracker) {
             System.out.println("------------ Поиск заявки по имени --------------");
             String name = input.ask("Введите имя заявки, которую вы хотите найти");
-            Item[] items = tracker.findByName(name);
+            List<Item> items = tracker.findByName(name);
             for (Item item : items) {
                 if (item != null) {
                     System.out.print("ID - " + item.getId() + " | ");

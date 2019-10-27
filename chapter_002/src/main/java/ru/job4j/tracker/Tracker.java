@@ -1,7 +1,8 @@
 package ru.job4j.tracker;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
-import java.util.Arrays;
 
 /**
  * @author Mikhail Vyuzhanin (vyuzzzh@yandex.ru)
@@ -12,7 +13,8 @@ public class Tracker {
     /**
      * Массив для хранение заявок.
      */
-    private final Item[] items = new Item[100];
+    private final List<Item> items = new ArrayList<>();
+    //private final Item[] items = new Item[100];
 
     /**
      * Указатель ячейки для новой заявки.
@@ -31,23 +33,22 @@ public class Tracker {
      */
     public Item add(Item item) {
         item.setId(this.generateId());
-        this.items[this.position++] = item;
+        this.items.add(item);
         return item;
     }
 
     /**
      * Метод заменяющий ячейку в массиве items.
-     * @param id ячейки, которую нужно заменить.
+     *  id ячейки, которую нужно заменить.
      * @param item объект, на который нужно заменить.
      * @return true, при успешной замене, иначе false.
      */
-    public boolean replace(String id, Item item) {
+    public boolean replace(Item item) {
         boolean result = false;
 
-        for (int i = 0; i < this.position; i++) {
-            if (items[i] != null && items[i].getId().equals(id)) {
-                item.setId(id);
-                items[i] = item;
+        for (Item cur : items) {
+            if (item != null && item.getId().equals(cur.getId())) {
+                items.set(items.indexOf(cur), item);
                 result = true;
                 break;
             }
@@ -58,19 +59,15 @@ public class Tracker {
     /**
      * Метод, удаляет ячейку в массиве, смещающая все элементы после него на 1 ячейку влево.
      *
-     * @param id ячейки, которую нужно удалить.
+     *  id ячейки, которую нужно удалить.
      * @return true при успешном удалении, иначе false.
      */
-    public boolean delete(String id) {
+    public boolean delete(Item item) {
         boolean result = false;
 
-        for (int i = 0; i < this.position; i++) {
-            if (items[i] != null && items[i].getId().equals(id)) {
-                System.arraycopy(this.items, i + 1, this.items, i, this.items.length - i - 1);
-                this.position--;
-                result = true;
-                break;
-            }
+        if (item != null) {
+            items.remove(item);
+            result = true;
         }
         return result;
     }
@@ -80,13 +77,8 @@ public class Tracker {
      *
      * @return копию массива items без null элементов.
      */
-    public Item[] findAll() {
-        Item[] result = new Item[this.position];
-
-        for (int index = 0; index != this.position; index++) {
-            result[index] = this.items[index];
-        }
-        return result;
+    public List<Item> findAll() {
+        return this.items;
     }
 
     /**
@@ -97,16 +89,14 @@ public class Tracker {
      * @param key - имя элемента, с которым сверяются все элементы массива this.items.
      * @return - массив, все элементы которого содержат поле name, соответствующее key.
      * */
-    public Item[] findByName(String key) {
-        int count = 0;
-        Item[] nameItems = new Item[position];
-        for (int i = 0; i < position; i++) {
-            if (this.items[i].getName().equals(key)) {
-                nameItems[count] = this.items[i];
-                count++;
+    public List<Item> findByName(String key) {
+        List<Item> nameItems = new ArrayList<>();
+        for (Item cur : this.items) {
+            if (cur != null && cur.getName().equals(key)) {
+                nameItems.add(cur);
             }
         }
-        return Arrays.copyOf(nameItems, count);
+        return nameItems;
     }
 
     /**
@@ -117,9 +107,9 @@ public class Tracker {
      * */
     public Item findById(String id) {
         Item result = null;
-        for (int i = 0; i < position; i++) {
-            if (this.items[i] != null && this.items[i].getId().equals(id)) {
-                result = items[i];
+        for (Item cur : items) {
+            if (cur != null && cur.getId().equals(id)) {
+                result = cur;
                 break;
             }
         }

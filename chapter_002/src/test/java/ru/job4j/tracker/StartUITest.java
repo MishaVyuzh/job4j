@@ -1,4 +1,3 @@
-/*
 package ru.job4j.tracker;
 
 import org.junit.Before;
@@ -50,7 +49,7 @@ public class StartUITest {
     @Test
     public void whenUserAddItemThenTrackerHasNewItemWithSameName() {
         new StartUI(input0, tracker).init();     //   создаём StartUI и вызываем метод init()
-        assertThat(tracker.findAll()[0].getName(), is("test name")); // проверяем, что нулевой элемент массива в трекере содержит имя, введённое при эмуляции.
+        assertThat(tracker.findAll().get(0).getName(), is("test name")); // проверяем, что нулевой элемент массива в трекере содержит имя, введённое при эмуляции.
     }
 
     @Test
@@ -64,7 +63,7 @@ public class StartUITest {
     @Test
     public void whenDeleteThenTrackerHasUpdatedValueNull() {
         // создаём StartUI и вызываем метод init()
-        new StartUI(input3, tracker).init();
+            new StartUI(input3, tracker).init();
         String deleteId = null;
         // проверяем, что Id удален.
         assertThat(tracker.findById(def.getId()), is(deleteId));
@@ -116,9 +115,9 @@ public class StartUITest {
                 .append(menu)
                 .append("\r\n" + "------------ Поиск заявки по id --------------" + "\r\n")
                 .append(String.format("ID - %s | Имя - %s | Описание - %s \r\n\r\n",
-                        tracker.findAll()[0].getId(),
-                        tracker.findAll()[0].getName(),
-                        tracker.findAll()[0].getDesc()))
+                        tracker.findAll().get(0).getId(),
+                        tracker.findAll().get(0).getName(),
+                        tracker.findAll().get(0).getDesc()))
                 .append(menu)
                 .append(System.lineSeparator())
                 .toString()
@@ -135,12 +134,12 @@ public class StartUITest {
                 .append(menu)
                 .append("\r\n" + "------------ Поиск заявки по имени --------------" + "\r\n")
                 .append(String.format("ID - %s | Имя - %s | Описание - %s \r\n\r\n",
-                        tracker.findAll()[3].getId(),
-                        tracker.findAll()[3].getName(),
-                        tracker.findAll()[3].getDesc()))
+                        tracker.findAll().get(3).getId(),
+                        tracker.findAll().get(3).getName(),
+                        tracker.findAll().get(3).getDesc()))
                 .append(menu)
                 .append(System.lineSeparator())
                 .toString()
         ));
     }
-}*/
+}
