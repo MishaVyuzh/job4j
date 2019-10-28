@@ -60,7 +60,7 @@ public class MenuTracker {
      */
     public void fillActions(StartUI ui) {
         this.actions.add(new AddItem(0, "Добавить заявку"));
-        this.actions.add(new ShowItems(1, "Выыод заявок на экран"));
+        this.actions.add(new ShowItems(1, "Вывод заявок на экран"));
         this.actions.add(new EditItems(2, "Редактировать заявку"));
         this.actions.add(new DeleteItem(3, "Удалить заявку"));
         this.actions.add(new FindItemById(4, "Поиск заявки по id"));
@@ -128,6 +128,7 @@ public class MenuTracker {
             String nameReplace = input.ask("Введите имя новой заявки :");
             String descReplace = input.ask("Введите описание новой заявки :");
             Item item = new Item(nameReplace, descReplace);
+            item.setId(id);
 
             if (tracker.replace(item)) {
                 System.out.println("------------ Новая заявка с Id : " + item.getId() + " -----------");
@@ -193,17 +194,23 @@ public class MenuTracker {
             System.out.println("------------ Поиск заявки по имени --------------");
             String name = input.ask("Введите имя заявки, которую вы хотите найти");
             List<Item> items = tracker.findByName(name);
-            for (Item item : items) {
-                if (item != null) {
-                    System.out.print("ID - " + item.getId() + " | ");
-                    System.out.print("Имя - " + item.getName() + " | ");
-                    System.out.println("Описание - " + item.getDesc() + " ");
-                    System.out.println();
-                } else {
-                    System.out.println("Заявка не найдена");
-                    System.out.println();
+            if (!items.isEmpty()) {
+                for (Item item : items) {
+                    if (item != null) {
+                        System.out.print("ID - " + item.getId() + " | ");
+                        System.out.print("Имя - " + item.getName() + " | ");
+                        System.out.println("Описание - " + item.getDesc() + " ");
+                        System.out.println();
+                    } else {
+                        System.out.println("Заявка не найдена");
+                        System.out.println();
+                    }
                 }
+            } else {
+                System.out.println("Заявка не найдена");
+                System.out.println();
             }
+
         }
     }
 
