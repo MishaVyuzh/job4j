@@ -36,7 +36,7 @@ public class StartUITest {
             + "\r\n" + "3 - Удалить заявку"
             + "\r\n" + "4 - Поиск заявки по id"
             + "\r\n" + "5 - Поиск заявки по имени"
-            + "\r\n" + "y - Выход";
+            + "\r\n" + "6 - Выход";
 
     @Before
     public void loadOutput() {
@@ -100,8 +100,7 @@ public class StartUITest {
                     .append(String.format("ID - %s | Имя - %s | Описание - %s \r\n\r\n", item.getId(), item.getName(), item.getDesc()));
         }
         assertThat(new String(out.toByteArray()), is(output
-                        .append(menu)
-                        .append(System.lineSeparator())
+                        //.append(System.lineSeparator())
                         .toString()
                 )
         );
@@ -120,8 +119,6 @@ public class StartUITest {
                         tracker.findAll().get(0).getId(),
                         tracker.findAll().get(0).getName(),
                         tracker.findAll().get(0).getDesc()))
-                .append(menu)
-                .append(System.lineSeparator())
                 .toString()
         ));
     }
@@ -140,8 +137,6 @@ public class StartUITest {
                         tracker.findAll().get(3).getId(),
                         tracker.findAll().get(3).getName(),
                         tracker.findAll().get(3).getDesc()))
-                .append(menu)
-                .append(System.lineSeparator())
                 .toString()
         ));
     }

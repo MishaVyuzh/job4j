@@ -14,7 +14,7 @@ public class StartUI {
      * Получение данных от пользователя.
      */
     private final Input input;
-    private Tracker tracker = new Tracker();
+    private Tracker tracker;
 
     private boolean exit = true;
 
@@ -23,7 +23,9 @@ public class StartUI {
      */
 
     public StartUI(Input input, Tracker tracker) {
+
         this.input = input;
+        this.tracker = tracker;
     }
 
     /**
