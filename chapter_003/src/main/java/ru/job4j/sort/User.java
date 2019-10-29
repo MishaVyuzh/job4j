@@ -2,7 +2,7 @@ package ru.job4j.sort;
 
 public class User implements Comparable<User>{
     private String name;
-    private int age;
+    private Integer age;
 
     public User(String name, int age) {
         this.name = name;
@@ -13,7 +13,7 @@ public class User implements Comparable<User>{
         return name;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
