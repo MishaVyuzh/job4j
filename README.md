@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/MishaVyuzh/job4j.svg?branch=master)](https://travis-ci.org/MishaVyuzh/job4j)
+[![codecov](https://codecov.io/gh/MishaVyuzh/job4j/branch/master/graph/badge.svg)](https://codecov.io/gh/MishaVyuzh/job4j)
 # Репозиторий Михаила Вьюжанина.
 
 Я прохожу обучение по курсу Job4j. Планирую в октябре 2019 года устроится java-разработчиком, а также 
