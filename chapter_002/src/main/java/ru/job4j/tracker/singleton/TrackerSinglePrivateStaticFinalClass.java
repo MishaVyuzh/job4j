@@ -14,7 +14,9 @@ import ru.job4j.tracker.Item;
 
 public class TrackerSinglePrivateStaticFinalClass {
 
-    private TrackerSinglePrivateStaticFinalClass() {}
+    private TrackerSinglePrivateStaticFinalClass() {
+
+    }
 
     public static TrackerSinglePrivateStaticFinalClass getInstance() {
         return Holder.INSTANCE;

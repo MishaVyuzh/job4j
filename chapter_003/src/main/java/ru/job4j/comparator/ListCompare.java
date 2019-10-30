@@ -7,8 +7,8 @@ public class ListCompare implements Comparator<String> {
     public int compare(String left, String right) {
         int result = 0;
         int range = Math.min(left.length(), right.length());
-        for(int i = 0; i < range; i++) {
-            if(left.charAt(i) != right.charAt(i)) {
+        for (int i = 0; i < range; i++) {
+            if (left.charAt(i) != right.charAt(i)) {
                 result = Character.compare(left.charAt(i), right.charAt(i));
                 break;
             }

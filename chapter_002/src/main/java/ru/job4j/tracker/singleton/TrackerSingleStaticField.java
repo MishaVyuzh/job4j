@@ -15,7 +15,9 @@ import ru.job4j.tracker.Item;
 public class TrackerSingleStaticField {
     private static TrackerSingleStaticField instance;
 
-    private TrackerSingleStaticField() {}
+    private TrackerSingleStaticField() {
+
+    }
 
     public static TrackerSingleStaticField getInstance() {
         if (instance == null) {
