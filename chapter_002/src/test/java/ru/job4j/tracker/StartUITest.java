@@ -108,7 +108,7 @@ public class StartUITest {
         );
     }
 
-    /*@Test
+    @Test
     public void whenShowFindByIdThenTrackerHasItem() {
         // создаём StartUI и вызываем метод init()
         new StartUI(input4, tracker).init();
@@ -116,16 +116,18 @@ public class StartUITest {
         // проверяем, что нулевой элемент массива в трекере содержит id, введённое при эмуляции.
         assertThat(new String(out.toByteArray()), is(output
                 .append(menu)
-                .append("\r\n" + "------------ Поиск заявки по id --------------" + "\r\n")
-                .append(String.format("ID - %s | Имя - %s | Описание - %s \r\n\r\n",
+                .append(System.lineSeparator() + "------------ Поиск заявки по id --------------" + System.lineSeparator())
+                .append(String.format("ID - %s | Имя - %s | Описание - %s ",
                         tracker.findAll().get(0).getId(),
                         tracker.findAll().get(0).getName(),
                         tracker.findAll().get(0).getDesc()))
+                .append(System.lineSeparator())
+                .append(System.lineSeparator())
                 .toString()
         ));
-    }*/
+    }
 
-   /* @Test
+    @Test
     public void whenShowFindByNameThenTrackerReturnItems() {
         // создаём StartUI и вызываем метод init()
         new StartUI(input6, tracker).init();
@@ -134,12 +136,14 @@ public class StartUITest {
         // проверяем, что нулевой элемент массива в трекере содержит id, введённое при эмуляции.
         assertThat(result, is(output
                 .append(menu)
-                .append("\r\n" + "------------ Поиск заявки по имени --------------" + "\r\n")
-                .append(String.format("ID - %s | Имя - %s | Описание - %s \r\n\r\n",
+                .append(System.lineSeparator() + "------------ Поиск заявки по имени --------------" + System.lineSeparator())
+                .append(String.format("ID - %s | Имя - %s | Описание - %s ",
                         tracker.findAll().get(3).getId(),
                         tracker.findAll().get(3).getName(),
                         tracker.findAll().get(3).getDesc()))
+                .append(System.lineSeparator())
+                .append(System.lineSeparator())
                 .toString()
         ));
-    }*/
+    }
 }
