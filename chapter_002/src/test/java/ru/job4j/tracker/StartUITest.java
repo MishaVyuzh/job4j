@@ -30,13 +30,13 @@ public class StartUITest {
     private Input input5 = new StubInput(new String[]{"5", first.getName(), "y"});
     private Input input6 = new StubInput(new String[]{"5", third.getName(), "y"});
     private String menu = "------------ Меню ------------"
-            + "\r\n" + "0 - Добавить заявку"
-            + "\r\n" + "1 - Вывод заявок на экран"
-            + "\r\n" + "2 - Редактировать заявку"
-            + "\r\n" + "3 - Удалить заявку"
-            + "\r\n" + "4 - Поиск заявки по id"
-            + "\r\n" + "5 - Поиск заявки по имени"
-            + "\r\n" + "6 - Выход";
+            + System.lineSeparator() + "0 - Добавить заявку"
+            + System.lineSeparator() + "1 - Вывод заявок на экран"
+            + System.lineSeparator() + "2 - Редактировать заявку"
+            + System.lineSeparator() + "3 - Удалить заявку"
+            + System.lineSeparator() + "4 - Поиск заявки по id"
+            + System.lineSeparator() + "5 - Поиск заявки по имени"
+            + System.lineSeparator() + "6 - Выход";
 
     @Before
     public void loadOutput() {
