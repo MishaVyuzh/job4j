@@ -87,24 +87,26 @@ public class StartUITest {
         assertThat(tracker.findByName(first.getName()), is(List.of(first, second)));
     }
 
-    /*@Test
+    @Test
     public void whenShowFindAllItems() {
         new StartUI(input1, tracker).init();
         StringBuilder output = new StringBuilder();
         output
                 .append(menu)
-                .append("\r\n" + "------------ Список всех заявок --------------" + "\r\n");
+                .append(System.lineSeparator() + "------------ Список всех заявок --------------" + System.lineSeparator());
 
         for (Item item : tracker.findAll()) {
             output
-                    .append(String.format("ID - %s | Имя - %s | Описание - %s \r\n\r\n", item.getId(), item.getName(), item.getDesc()));
+                    .append(String.format("ID - %s | Имя - %s | Описание - %s ", item.getId(), item.getName(), item.getDesc()))
+                    .append(System.lineSeparator())
+                    .append(System.lineSeparator());
         }
         assertThat(new String(out.toByteArray()), is(output
                         //.append(System.lineSeparator())
                         .toString()
                 )
         );
-    }*/
+    }
 
     /*@Test
     public void whenShowFindByIdThenTrackerHasItem() {
