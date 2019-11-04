@@ -108,7 +108,7 @@ public class BankTransfers {
         Account srcAccount = getAccountByRequisite(srcPassport, srcRequisite);
         Account destAccount = getAccountByRequisite(destPassport, dstRequisite);
         if (amount > 0) {
-            if (srcAccount != null && destAccount != null && destAccount.getValues() >= amount) {
+            if (!srcAccount.equals(new Account()) && !destAccount.equals(new Account()) && destAccount.getValues() >= amount) {
                 srcAccount.setValues(srcAccount.getValues() - amount);
                 destAccount.setValues(destAccount.getValues() + amount);
                 report = true;
