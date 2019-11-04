@@ -85,8 +85,8 @@ public class BankTransfers {
         Account account = new Account();
         Account accountReq = new Account(requisite);
         List<Account> accounts = getUserAccounts(passport);
-        for(Account acc : accounts) {
-            if(acc.getRequisites().equals(accountReq.getRequisites())) {
+        for (Account acc : accounts) {
+            if (acc.getRequisites().equals(accountReq.getRequisites())) {
                 account = acc;
             }
         }
