@@ -83,11 +83,13 @@ public class BankTransfers {
      */
     public Account getAccountByRequisite(String passport, String requisite) {
         Account account = new Account();
-        Account accountReq = new Account(requisite);
         List<Account> accounts = getUserAccounts(passport);
         for (Account acc : accounts) {
-            if (acc.getRequisites().equals(accountReq.getRequisites())) {
+            if (acc.getRequisites().equals(requisite)) {
                 account = acc;
+                break;
+            } else {
+                account = null;
             }
         }
         return account;
@@ -108,7 +110,7 @@ public class BankTransfers {
         Account srcAccount = getAccountByRequisite(srcPassport, srcRequisite);
         Account destAccount = getAccountByRequisite(destPassport, dstRequisite);
         if (amount > 0) {
-            if (!srcAccount.equals(new Account()) && !destAccount.equals(new Account()) && destAccount.getValues() >= amount) {
+            if (srcAccount != null && destAccount != null && destAccount.getValues() >= amount) {
                 srcAccount.setValues(srcAccount.getValues() - amount);
                 destAccount.setValues(destAccount.getValues() + amount);
                 report = true;
