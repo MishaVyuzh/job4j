@@ -2,6 +2,7 @@ package ru.job4j.tracker;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 
 /**
  * @author Mikhail Vyuzhanin (vyuzzzh@yandex.ru)
@@ -15,6 +16,7 @@ public class StartUI {
      */
     private final Input input;
     private Tracker tracker;
+    private final Consumer<String> output;
 
     private boolean exit = true;
 
@@ -22,10 +24,11 @@ public class StartUI {
      * Хранилище заявок.
      */
 
-    public StartUI(Input input, Tracker tracker) {
+    public StartUI(Input input, Tracker tracker, Consumer<String> output) {
 
         this.input = input;
         this.tracker = tracker;
+        this.output = output;
     }
 
     /**
@@ -35,14 +38,14 @@ public class StartUI {
         /**
          * Хранилище заявок.
          */
-        MenuTracker menu = new MenuTracker(this.input, this.tracker);
+        MenuTracker menu = new MenuTracker(this.input, this.tracker, output);
         menu.fillActions(this);
         List<Integer> range = new ArrayList<>();
         for (int i = 0; i < menu.getActionsLength(); i++) {
             range.add(i);
         }
         do {
-            System.out.println("------------ Меню ------------");
+            output.accept("------------ Меню ------------");
             menu.show();
             menu.select(input.ask("Введите пункт меню : ", range));
         } while (!"y".equals(this.input.ask("Вы точно хотите выйти?(y): ")));
@@ -61,7 +64,8 @@ public class StartUI {
                 new ValidateInput(
                         new ConsoleInput()
                 ),
-                new Tracker()
+                new Tracker(),
+                System.out::println
         ).init();
     }
 }
