@@ -112,7 +112,7 @@ public class StartUITest {
                     .append(System.lineSeparator())
                     .append(System.lineSeparator());
         }
-        assertThat(new String(out.toByteArray()), is(output
+        assertThat(out.toString(), is(output
                         .toString()
                 )
         );
@@ -122,9 +122,9 @@ public class StartUITest {
     public void whenShowFindByIdThenTrackerHasItem() {
         // создаём StartUI и вызываем метод init()
         new StartUI(input4, tracker, output).init();
-        StringBuilder output = new StringBuilder();
+        StringBuilder expect = new StringBuilder();
         // проверяем, что нулевой элемент массива в трекере содержит id, введённое при эмуляции.
-        assertThat(new String(out.toByteArray()), is(output
+        assertThat(out.toString(), is(expect
                 .append(menu)
                 .append(System.lineSeparator())
                 .append("------------ Поиск заявки по id --------------")

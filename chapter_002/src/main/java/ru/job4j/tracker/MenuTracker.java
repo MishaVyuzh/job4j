@@ -8,18 +8,18 @@ import java.util.function.Consumer;
  */
 class  AddItem extends BaseAction {
 
-    public AddItem(int key, String name) {
-        super(key, name);
+    public AddItem(int key, String name, Consumer<String> output) {
+        super(key, name, output);
     }
 
     @Override
     public void execute(Input input, Tracker tracker) {
-        System.out.println("------------ Добавление новой заявки --------------");
+        this.output.accept("------------ Добавление новой заявки --------------");
         String name = input.ask("Введите имя заявки :");
         String desc = input.ask("Введите описание заявки :");
         Item item = new Item(name, desc);
         tracker.add(item);
-        System.out.println("------------ Новая заявка с Id : " + item.getId() + " -----------");
+        this.output.accept("------------ Новая заявка с Id : " + item.getId() + " -----------");
     }
 }
 
@@ -62,13 +62,13 @@ public class MenuTracker {
      * Метод заполняет массив.
      */
     public void fillActions(StartUI ui) {
-        this.actions.add(new AddItem(0, "Добавить заявку"));
-        this.actions.add(new ShowItems(1, "Вывод заявок на экран"));
-        this.actions.add(new EditItems(2, "Редактировать заявку"));
-        this.actions.add(new DeleteItem(3, "Удалить заявку"));
-        this.actions.add(new FindItemById(4, "Поиск заявки по id"));
-        this.actions.add(new FindItemsByName(5, "Поиск заявки по имени"));
-        this.actions.add(new ExitProgram(6, "Выход", ui));
+        this.actions.add(new AddItem(0, "Добавить заявку", output));
+        this.actions.add(new ShowItems(1, "Вывод заявок на экран", output));
+        this.actions.add(new EditItems(2, "Редактировать заявку", output));
+        this.actions.add(new DeleteItem(3, "Удалить заявку", output));
+        this.actions.add(new FindItemById(4, "Поиск заявки по id", output));
+        this.actions.add(new FindItemsByName(5, "Поиск заявки по имени", output));
+        this.actions.add(new ExitProgram(6, "Выход", ui, output));
     }
 
     /**
@@ -92,8 +92,8 @@ public class MenuTracker {
     }
     private class ShowItems extends BaseAction {
 
-        public ShowItems(int key, String name) {
-            super(key, name);
+        public ShowItems(int key, String name, Consumer<String> output) {
+            super(key, name, output);
         }
 
         @Override
@@ -117,8 +117,8 @@ public class MenuTracker {
      */
     private class EditItems extends BaseAction {
 
-        public EditItems(int key, String name) {
-            super(key, name);
+        public EditItems(int key, String name, Consumer<String> output) {
+            super(key, name, output);
         }
 
         @Override
@@ -140,8 +140,8 @@ public class MenuTracker {
 
     private class DeleteItem extends BaseAction {
 
-        public DeleteItem(int key, String name) {
-            super(key, name);
+        public DeleteItem(int key, String name, Consumer<String> output) {
+            super(key, name, output);
         }
 
         @Override
@@ -158,8 +158,8 @@ public class MenuTracker {
 
     private class FindItemById extends BaseAction {
 
-        public FindItemById(int key, String name) {
-            super(key, name);
+        public FindItemById(int key, String name, Consumer<String> output) {
+            super(key, name, output);
         }
 
         @Override
@@ -178,8 +178,8 @@ public class MenuTracker {
 
     private class FindItemsByName extends BaseAction {
 
-        public FindItemsByName(int key, String name) {
-            super(key, name);
+        public FindItemsByName(int key, String name, Consumer<String> output) {
+            super(key, name, output);
         }
 
         @Override
@@ -207,8 +207,8 @@ public class MenuTracker {
 
         private final StartUI ui;
 
-        public ExitProgram(int key, String name, StartUI ui) {
-            super(key, name);
+        public ExitProgram(int key, String name, StartUI ui, Consumer<String> output) {
+            super(key, name, output);
             this.ui = ui;
         }
 
