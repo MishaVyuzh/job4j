@@ -103,11 +103,11 @@ public class MenuTracker {
 
                 output.accept("------------ Список всех заявок --------------");
                 for (Item item : items) {
-                    output.accept(String.format("ID - %s | Имя - %s | Описание - %s \r\n",
-                            item.getId(), item.getName(), item.getDesc()));
+                    output.accept(String.format("ID - %s | Имя - %s | Описание - %s %s",
+                            item.getId(), item.getName(), item.getDesc(), System.lineSeparator()));
                 }
             } else {
-                output.accept("------------ Заявки отсутствуют ------------\r\n");
+                output.accept("------------ Заявки отсутствуют ------------" + System.lineSeparator());
             }
         }
     }
@@ -131,9 +131,9 @@ public class MenuTracker {
             item.setId(id);
 
             if (tracker.replace(item)) {
-                output.accept("------------ Новая заявка с Id : " + item.getId() + " -----------\r\n");
+                output.accept("------------ Новая заявка с Id : " + item.getId() + " -----------" + System.lineSeparator());
             } else  {
-                output.accept("Заявки с таким id не существует.\r\n");
+                output.accept("Заявки с таким id не существует." + System.lineSeparator());
             }
         }
     }
@@ -149,9 +149,9 @@ public class MenuTracker {
             output.accept("------------ Удаление заявки --------------");
             String id = input.ask("Введите id заявки, которую вы хотите удалить");
             if (tracker.delete(tracker.findById(id))) {
-                output.accept("------------ Новая заявка с Id : " + id + " успешно удалена -----------\r\n");
+                output.accept("------------ Новая заявка с Id : " + id + " успешно удалена -----------" + System.lineSeparator());
             } else {
-                output.accept("Заявки с таким id не существует.\r\n");
+                output.accept("Заявки с таким id не существует." + System.lineSeparator());
             }
         }
     }
@@ -168,10 +168,10 @@ public class MenuTracker {
             String id = input.ask("Введите id заявки, которую вы хотите найти");
             Item item = tracker.findById(id);
             if (item != null) {
-                output.accept(String.format("ID - %s | Имя - %s | Описание - %s \r\n",
-                        item.getId(), item.getName(), item.getDesc()));
+                output.accept(String.format("ID - %s | Имя - %s | Описание - %s %s",
+                        item.getId(), item.getName(), item.getDesc(), System.lineSeparator()));
             } else {
-                output.accept("Заявка не найдена\r\n");
+                output.accept("Заявка не найдена" + System.lineSeparator());
             }
         }
     }
@@ -190,14 +190,14 @@ public class MenuTracker {
             if (!items.isEmpty()) {
                 for (Item item : items) {
                     if (item != null) {
-                        output.accept(String.format("ID - %s | Имя - %s | Описание - %s \r\n",
-                                item.getId(), item.getName(), item.getDesc()));
+                        output.accept(String.format("ID - %s | Имя - %s | Описание - %s %s",
+                                item.getId(), item.getName(), item.getDesc(), System.lineSeparator()));
                     } else {
-                        output.accept("Заявка не найдена\r\n");
+                        output.accept("Заявка не найдена" + System.lineSeparator());
                     }
                 }
             } else {
-                output.accept("Заявка не найдена\r\n");
+                output.accept("Заявка не найдена" + System.lineSeparator());
             }
 
         }
