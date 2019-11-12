@@ -6,6 +6,7 @@ import static org.junit.Assert.assertThat;
 import static org.hamcrest.Matchers.is;
 
 import java.util.List;
+import java.util.Map;
 
 public class SchoolTest {
     private School school = new School();
@@ -52,6 +53,22 @@ public class SchoolTest {
         );
         List<Student> result = school.collect(allStudents,
                 student -> student.getScore() >= 0 && student.getScore() < 50);
+        assertThat(result, is(expected));
+    }
+
+    @Test
+    public void changeListStudentToMapWithKeySurname() {
+        List<Student> students = List.of(
+                new Student(50, "Sidorov"),
+                new Student(30, "Ivanov"),
+                new Student(40, "Petrov")
+        );
+        Map<String, Student> expected = Map.of(
+                "Ivanov", new Student(30, "Ivanov"),
+                "Petrov", new Student(40, "Petrov"),
+                "Sidorov", new Student(50, "Sidorov")
+        );
+        Map<String, Student> result = school.change(students);
         assertThat(result, is(expected));
     }
 }
