@@ -11,7 +11,7 @@ public class School {
     }
 
     Map<String, Student> change(List<Student> students) {
-        return students.stream().distinct().collect(
+        return students.stream().collect(
                 Collectors.toMap(
                         e -> e.getSurname(),
                         e -> e
