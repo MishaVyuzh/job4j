@@ -32,12 +32,12 @@ public class BankTransfers {
      */
     public void addAccountToUser(String passport, Account account) {
         Set<User> users = listBankAccount.keySet();
-        for (User key : users) {
-            if (key.getPassport().equals(passport)) {
-                listBankAccount.get(key).add(account);
-                break;
-            }
-        }
+        users.stream().filter(
+                key -> key.getPassport().equals(passport)
+        )
+                .findFirst().ifPresent(
+                        key -> listBankAccount.get(key).add(account)
+        );
     }
 
     /**
@@ -48,12 +48,12 @@ public class BankTransfers {
      */
     public void deleteAccountFromUser(String passport, Account account) {
         Set<User> users = listBankAccount.keySet();
-        for (User key : users) {
-            if (key.getPassport().equals(passport)) {
-                listBankAccount.get(key).remove(account);
-                break;
-            }
-        }
+        users.stream().filter(
+                key -> key.getPassport().equals(passport)
+        )
+                .findFirst().ifPresent(
+                        key -> listBankAccount.get(key).remove(account)
+        );
     }
 
     /**
@@ -63,36 +63,27 @@ public class BankTransfers {
      * @return List список счетов.
      */
     public List<Account> getUserAccounts(String passport) {
-        List<Account> accounts = new ArrayList<>();
         Set<User> users = listBankAccount.keySet();
-        for (User key : users) {
-            if (key.getPassport().equals(passport)) {
-                accounts = listBankAccount.get(key);
-                break;
-            }
-        }
-        return accounts;
+        return users.stream().filter(
+                key -> key.getPassport().equals(passport)
+        )
+                .findFirst().map(
+                        key -> listBankAccount.get(key)).orElse(new ArrayList<>());
     }
 
     /**
-     * Метод получает счёт по паспорту пользователя и реквезитам.
+     * Метод получает счёт по паспорту пользователя и рекви зитам.
      *
      * @param passport паспорт пользователя счёта.
      * @param requisite реквизиты счёта.
      * @return найденный счёт.
      */
     public Account getAccountByRequisite(String passport, String requisite) {
-        Account account = new Account();
         List<Account> accounts = getUserAccounts(passport);
-        for (Account acc : accounts) {
-            if (acc.getRequisites().equals(requisite)) {
-                account = acc;
-                break;
-            } else {
-                account = null;
-            }
-        }
-        return account;
+        return accounts.stream().filter(
+                account -> account.getRequisites().equals(requisite)
+        )
+                .findFirst().orElse(new Account());
     }
 
     /**
