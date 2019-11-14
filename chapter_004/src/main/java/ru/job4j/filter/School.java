@@ -13,8 +13,9 @@ public class School {
     Map<String, Student> change(List<Student> students) {
         return students.stream().collect(
                 Collectors.toMap(
-                        e -> e.getSurname(),
-                        e -> e
+                        e -> e.getSurname() + e.getScore(),
+                        e -> e,
+                        ((student, student2) -> student)
                 )
         );
     }

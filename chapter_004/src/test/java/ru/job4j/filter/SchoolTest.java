@@ -64,9 +64,44 @@ public class SchoolTest {
                 new Student(40, "Petrov")
         );
         Map<String, Student> expected = Map.of(
-                "Ivanov", new Student(30, "Ivanov"),
-                "Petrov", new Student(40, "Petrov"),
-                "Sidorov", new Student(50, "Sidorov")
+                "Ivanov30", new Student(30, "Ivanov"),
+                "Petrov40", new Student(40, "Petrov"),
+                "Sidorov50", new Student(50, "Sidorov")
+        );
+        Map<String, Student> result = school.change(students);
+        assertThat(result, is(expected));
+    }
+
+    @Test
+    public void whenHasDoubleIvanovSameScoreChangeListStudentToMapWithKeySurname() {
+        List<Student> students = List.of(
+                new Student(50, "Sidorov"),
+                new Student(30, "Ivanov"),
+                new Student(30, "Ivanov"),
+                new Student(40, "Petrov")
+        );
+        Map<String, Student> expected = Map.of(
+                "Ivanov30", new Student(30, "Ivanov"),
+                "Petrov40", new Student(40, "Petrov"),
+                "Sidorov50", new Student(50, "Sidorov")
+        );
+        Map<String, Student> result = school.change(students);
+        assertThat(result, is(expected));
+    }
+
+    @Test
+    public void whenHasIvanovScore30AndIvanovScore75ChangeListStudentToMapWithKeySurname() {
+        List<Student> students = List.of(
+                new Student(50, "Sidorov"),
+                new Student(75, "Ivanov"),
+                new Student(30, "Ivanov"),
+                new Student(40, "Petrov")
+        );
+        Map<String, Student> expected = Map.of(
+                "Ivanov30", new Student(30, "Ivanov"),
+                "Ivanov75", new Student(75, "Ivanov"),
+                "Petrov40", new Student(40, "Petrov"),
+                "Sidorov50", new Student(50, "Sidorov")
         );
         Map<String, Student> result = school.change(students);
         assertThat(result, is(expected));
