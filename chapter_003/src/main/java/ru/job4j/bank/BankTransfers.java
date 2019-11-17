@@ -31,13 +31,7 @@ public class BankTransfers {
      * @param account счёт, который нужно добавить.
      */
     public void addAccountToUser(String passport, Account account) {
-        Set<User> users = listBankAccount.keySet();
-        users.stream().filter(
-                key -> key.getPassport().equals(passport)
-        )
-                .findFirst().ifPresent(
-                        key -> listBankAccount.get(key).add(account)
-        );
+        listBankAccount.get(getUserByPassport(passport)).add(account);
     }
 
     /**
@@ -47,13 +41,7 @@ public class BankTransfers {
      * @param account счёт, который нужно добавить.
      */
     public void deleteAccountFromUser(String passport, Account account) {
-        Set<User> users = listBankAccount.keySet();
-        users.stream().filter(
-                key -> key.getPassport().equals(passport)
-        )
-                .findFirst().ifPresent(
-                        key -> listBankAccount.get(key).remove(account)
-        );
+        listBankAccount.get(getUserByPassport(passport)).remove(account);
     }
 
     /**
@@ -63,12 +51,7 @@ public class BankTransfers {
      * @return List список счетов.
      */
     public List<Account> getUserAccounts(String passport) {
-        Set<User> users = listBankAccount.keySet();
-        return users.stream().filter(
-                key -> key.getPassport().equals(passport)
-        )
-                .findFirst().map(
-                        key -> listBankAccount.get(key)).orElse(new ArrayList<>());
+        return listBankAccount.get(getUserByPassport(passport));
     }
 
     /**
@@ -84,6 +67,19 @@ public class BankTransfers {
                 account -> account.getRequisites().equals(requisite)
         )
                 .findFirst().orElse(new Account());
+    }
+
+    /**
+     * Метод получает User по паспорту пользователя и рекви зитам.
+     *
+     * @param passport паспорт пользователя счёта.
+     * @return найденный User.
+     */
+    private User getUserByPassport(String passport) {
+        return listBankAccount.keySet().stream()
+                .filter(e -> e.getPassport().equals(passport))
+                .findFirst()
+                .get();
     }
 
     /**
