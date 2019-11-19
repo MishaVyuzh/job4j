@@ -16,7 +16,7 @@ public class ConvertListTest {
         List<int[]> list = new ArrayList<>();
         list.add(new int[]{1, 2});
         list.add(new int[]{3, 4, 5, 6});
-        List<Integer> result = Arrays.asList(
+        List<Integer> result = List.of(
                 1, 2, 3, 4, 5, 6
         );
         List<Integer> expect = convertList.convert(list);
@@ -26,11 +26,12 @@ public class ConvertListTest {
     @Test
     public void whenAddFourArrays() {
         ConvertList convertList = new ConvertList();
-        List<int[]> list = new ArrayList<>();
-        list.add(new int[]{1, 2});
-        list.add(new int[]{3, 4, 5, 6});
-        list.add(new int[]{0, 0, 155});
-        list.add(new int[]{});
+        List<int[]> list = new ArrayList<>(List.of(
+                new int[]{1, 2},
+                new int[]{3, 4, 5, 6},
+                new int[]{0, 0, 155},
+                new int[]{}
+        ));
         List<Integer> result = Arrays.asList(
                 1, 2, 3, 4, 5, 6, 0, 0, 155
         );
