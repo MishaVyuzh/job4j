@@ -1,0 +1,38 @@
+type: edu
+custom_name: What's up on a field?
+files:
+- name: test/TicTacToeTest.java
+  visible: false
+  learner_created: false
+- name: src/tictactoe/Main.java
+  visible: true
+  text: |
+    package tictactoe;
+    import java.util.Scanner;
+
+    public class Main {
+        public static void main(String[] args) {
+            Scanner scan = new Scanner(System.in);
+
+            System.out.print("Enter cells: ");
+            String str = scan.nextLine();
+            int k = 1;
+
+            System.out.println("---------");
+            for (int i = 0; i < 3; i++)
+            {
+                System.out.print("|");
+                for (int j = 0; j < 3; j++)
+                {
+                    System.out.print(" " + str.charAt(k));
+                    k++;
+                }
+                System.out.println(" |");
+            }
+            System.out.println("---------");
+        }
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/projects/48/stages/257/implement
+status: Unchecked
+record: -1

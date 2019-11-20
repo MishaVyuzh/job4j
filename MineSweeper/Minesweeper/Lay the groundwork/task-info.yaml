@@ -1,0 +1,20 @@
+type: edu
+custom_name: stage1
+files:
+- name: src/minesweeper/Main.java
+  visible: true
+  text: |
+    package minesweeper;
+
+    public class Main {
+        public static void main(String[] args) {
+            // write your code here
+        }
+    }
+  learner_created: false
+- name: test/MinesweeperTest.java
+  visible: false
+  learner_created: false
+feedback_link: https://hyperskill.org/projects/77/stages/426/implement
+status: Solved
+record: 2

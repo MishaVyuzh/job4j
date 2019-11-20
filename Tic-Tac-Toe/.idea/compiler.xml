@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="Problems-Finding_the_max_number_main" target="11" />
+      <module name="Problems-Finding_the_max_number_test" target="11" />
+      <module name="Problems-Frequency_of_characters_main" target="11" />
+      <module name="Problems-Frequency_of_characters_test" target="11" />
+      <module name="Problems-Iterator_-_1_main" target="11" />
+      <module name="Problems-Iterator_-_1_test" target="11" />
+      <module name="Problems-List_iterator_-_1_main" target="11" />
+      <module name="Problems-List_iterator_-_1_test" target="11" />
+      <module name="Problems-ListIterator_-_2_main" target="11" />
+      <module name="Problems-ListIterator_-_2_test" target="11" />
+      <module name="Problems-Multiple_swaps_main" target="11" />
+      <module name="Problems-Multiple_swaps_test" target="11" />
+      <module name="Problems-Reversed_list_main" target="11" />
+      <module name="Problems-Reversed_list_test" target="11" />
+      <module name="Problems-Rotating_table_main" target="11" />
+      <module name="Problems-Rotating_table_test" target="11" />
+      <module name="Problems-Sorting_sequences_main" target="11" />
+      <module name="Problems-Sorting_sequences_test" target="11" />
+      <module name="Problems-The_first_index_of_a_sublist_main" target="11" />
+      <module name="Problems-The_first_index_of_a_sublist_test" target="11" />
+      <module name="Tic-Tac-Toe-task_main" target="11" />
+      <module name="Tic-Tac-Toe-task_test" target="11" />
+      <module name="util_main" target="11" />
+      <module name="util_test" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

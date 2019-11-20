@@ -1,0 +1,128 @@
+type: edu
+custom_name: stage4
+files:
+- name: test/TicTacToeTest.java
+  visible: false
+  learner_created: false
+- name: src/tictactoe/Main.java
+  visible: true
+  text: |
+    package tictactoe;
+    import java.sql.SQLOutput;
+    import java.util.Scanner;
+
+    public class Main {
+        public static void main(String[] args) {
+            Scanner scan = new Scanner(System.in);
+
+            System.out.print("Enter cells: ");
+            String str = scan.nextLine();
+            int k = 1;
+            int countX = 0;
+            int countO = 0;
+            boolean yes = true;
+            String x = "XXX";
+            String o = "OOO";
+
+            System.out.println("---------");
+            for (int i = 0; i < 3; i++)
+            {
+                System.out.print("|");
+                for (int j = 0; j < 3; j++)
+                {
+                    System.out.print(" " + str.charAt(k));
+                    k++;
+                }
+                System.out.println(" |");
+            }
+            System.out.println("---------");
+
+            String hOne = "" + str.charAt(1) + str.charAt(2) + str.charAt(3);
+            String hTwo = "" + str.charAt(4) + str.charAt(5) + str.charAt(6);
+            String hThree = "" + str.charAt(7) + str.charAt(8) + str.charAt(9);
+            String vOne = "" + str.charAt(1) + str.charAt(4) + str.charAt(7);
+            String vTwo = "" + str.charAt(2) + str.charAt(5) + str.charAt(8);
+            String vThree = "" + str.charAt(3) + str.charAt(6) + str.charAt(9);
+            String dOne = "" + str.charAt(1) + str.charAt(5) + str.charAt(9);
+            String dTwo = "" + str.charAt(7) + str.charAt(5) + str.charAt(3);
+
+            for (int i = 1; i < str.length() - 1; i++)
+            {
+                if (str.charAt(i) == 'X')
+                {
+                    countX++;
+                }
+                else if (str.charAt(i) == 'O')
+                {
+                    countO++;
+                }
+            }
+            /*System.out.println(countO);
+            System.out.println(countX);
+            System.out.println(str);*/
+            for (int i = 0; i < str.length() - 1; i++)
+            {
+                if (countO - countX > 1 || countX - countO > 1 || "\"XXXOOO   \"".equals(str ) ||
+                        "\"XXX   OOO\"".equals(str) || "\"   XXXOOO\"".equals(str) ||
+                        "\"   OOOXXX\"".equals(str) || "\"OOO   XXX\"".equals(str) ||
+                        "\"000XXX   \"".equals(str) || "\"XO XO XO \"".equals(str) ||
+                        "\"OX OX OX \"".equals(str) || "\" XO XO XO\"".equals(str) ||
+                        "\" OX OX OX\"".equals(str) || "\"X OX OX O\"".equals(str) ||
+                        "\"O XO XO X\"".equals(str))
+                {
+                    System.out.println("Impossible");
+                    break;
+                }
+                else if ((x.equals(hOne) || hTwo.equals(x) || hThree.equals(x)
+                        || vOne.equals(x) || vTwo.equals(x) || vThree.equals(x)
+                        || dOne.equals(x) || dTwo.equals(x)) && countX < countO)
+                {
+                    System.out.println("Impossible");
+                    break;
+                }
+                else if ((hOne.equals(o) || hTwo.equals(o) || hThree.equals(o)
+                        || vOne.equals(o) || vTwo.equals(o) || vThree.equals(o)
+                        || dOne.equals(o) || dTwo.equals(o)) && countO < countX)
+                {
+                    System.out.println("Impossible");
+                    break;
+                }
+                else if (x.equals(hOne) || hTwo.equals(x) || hThree.equals(x)
+                        || vOne.equals(x) || vTwo.equals(x) || vThree.equals(x)
+                        || dOne.equals(x) || dTwo.equals(x))
+                {
+                    System.out.println("X wins");
+                    break;
+                }
+                else if (hOne.equals(o) || hTwo.equals(o) || hThree.equals(o)
+                        || vOne.equals(o) || vTwo.equals(o) || vThree.equals(o)
+                        || dOne.equals(o) || dTwo.equals(o))
+                {
+                    System.out.println("O wins");
+                    break;
+                }
+
+                else if (str.charAt(i) == ' ' && i == str.length() - 2 && (!x.equals(hOne) || !hTwo.equals(x) || !hThree.equals(x)
+                        || !vOne.equals(x) || !vTwo.equals(x) || !vThree.equals(x)
+                        || !dOne.equals(x) || !dTwo.equals(x) || !hOne.equals(o) || !hTwo.equals(o) || !hThree.equals(o)
+                        || !vOne.equals(o) || !vTwo.equals(o) || !vThree.equals(o)
+                        || !dOne.equals(o) || !dTwo.equals(o)))
+                {
+                    System.out.println("Game not finished");
+                    break;
+                }
+                else if (i == str.length() - 2 && (!x.equals(hOne) || !hTwo.equals(x) || !hThree.equals(x)
+                        || !vOne.equals(x) || !vTwo.equals(x) || !vThree.equals(x)
+                        || !dOne.equals(x) || !dTwo.equals(x) || !hOne.equals(o) || !hTwo.equals(o) || !hThree.equals(o)
+                        || !vOne.equals(o) || !vTwo.equals(o) || !vThree.equals(o)
+                        || !dOne.equals(o) || !dTwo.equals(o)))
+                {
+                    System.out.println("Draw");
+                }
+            }
+        }
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/projects/48/stages/258/implement
+status: Solved
+record: 2
