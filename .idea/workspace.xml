@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="798c4cbd-f878-4f2d-bb35-de107d8edf88" name="Default Changelist" comment="use of objects in Point.java &amp; PointTest.java" />
+    <list default="true" id="798c4cbd-f878-4f2d-bb35-de107d8edf88" name="Default Changelist" comment="use of objects in Point.java &amp; PointTest.java">
+      <change afterPath="$PROJECT_DIR$/chapter_004/src/main/java/ru/job4j/count/Count.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter_004/src/test/java/ru/job4j/count/CountTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,40 +60,24 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ConvertMatrix2ListTest">
+  <component name="RunManager" selected="JUnit.CountTest.whenListContainsNegativeNumbers">
+    <configuration name="Count" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.job4j.count.Count" />
+      <module name="chapter_004" />
+      <option name="VM_PARAMETERS" value="--module-path c:\Tools\javafx-sdk-11.0.2\lib\ --add-modules=javafx.controls,javafx.fxml" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.job4j.count.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="ru.job4j.puzzle.Puzzle" />
       <option name="VM_PARAMETERS" value="--module-path c:\Tools\javafx-sdk-11.0.2\lib\ --add-modules=javafx.controls,javafx.fxml" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ConvertList2ArrayTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="chapter_003" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.job4j.list.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.job4j.list" />
-      <option name="MAIN_CLASS_NAME" value="ru.job4j.list.ConvertList2ArrayTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ConvertListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="chapter_003" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.job4j.list.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.job4j.list" />
-      <option name="MAIN_CLASS_NAME" value="ru.job4j.list.ConvertListTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -105,6 +93,54 @@
       <option name="PACKAGE_NAME" value="ru.job4j.list" />
       <option name="MAIN_CLASS_NAME" value="ru.job4j.list.ConvertMatrix2ListTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CountTest.check" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="chapter_004" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.job4j.count.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.job4j.count" />
+      <option name="MAIN_CLASS_NAME" value="ru.job4j.count.CountTest" />
+      <option name="METHOD_NAME" value="check" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CountTest.whenListContainOnlyOddNumsThen0" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="chapter_004" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.job4j.count.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.job4j.count" />
+      <option name="MAIN_CLASS_NAME" value="ru.job4j.count.CountTest" />
+      <option name="METHOD_NAME" value="whenListContainOnlyOddNumsThen0" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CountTest.whenListContainsNegativeNumbers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="chapter_004" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.job4j.count.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.job4j.count" />
+      <option name="MAIN_CLASS_NAME" value="ru.job4j.count.CountTest" />
+      <option name="METHOD_NAME" value="whenListContainsNegativeNumbers" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -125,52 +161,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PhoneDictionaryTest.whenFindByName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="chapter_003" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.job4j.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.job4j" />
-      <option name="MAIN_CLASS_NAME" value="ru.job4j.PhoneDictionaryTest" />
-      <option name="METHOD_NAME" value="whenFindByName" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SortDepartmentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="chapter_003" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.job4j.department.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.job4j.department" />
-      <option name="MAIN_CLASS_NAME" value="ru.job4j.department.SortDepartmentTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="JUnit.MatrixCheckTest.whenDataTwoMonoFalseXTrueThenTrue" />
-      <item itemvalue="JUnit.PhoneDictionaryTest.whenFindByName" />
-      <item itemvalue="JUnit.SortDepartmentTest" />
-      <item itemvalue="JUnit.ConvertListTest" />
-      <item itemvalue="JUnit.ConvertList2ArrayTest" />
       <item itemvalue="JUnit.ConvertMatrix2ListTest" />
+      <item itemvalue="Application.Count" />
+      <item itemvalue="JUnit.CountTest.check" />
+      <item itemvalue="JUnit.CountTest.whenListContainOnlyOddNumsThen0" />
+      <item itemvalue="JUnit.CountTest.whenListContainsNegativeNumbers" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CountTest.whenListContainsNegativeNumbers" />
+        <item itemvalue="JUnit.CountTest.whenListContainOnlyOddNumsThen0" />
+        <item itemvalue="JUnit.CountTest.check" />
+        <item itemvalue="Application.Count" />
         <item itemvalue="JUnit.ConvertMatrix2ListTest" />
-        <item itemvalue="JUnit.SortDepartmentTest" />
-        <item itemvalue="JUnit.ConvertList2ArrayTest" />
-        <item itemvalue="JUnit.ConvertListTest" />
-        <item itemvalue="JUnit.PhoneDictionaryTest.whenFindByName" />
       </list>
     </recent_temporary>
   </component>
