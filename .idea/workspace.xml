@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="798c4cbd-f878-4f2d-bb35-de107d8edf88" name="Default Changelist" comment="use of objects in Point.java &amp; PointTest.java">
-      <change afterPath="$PROJECT_DIR$/chapter_004/src/main/java/ru/job4j/count/Count.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter_004/src/test/java/ru/job4j/count/CountTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tictactoe/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tictactoe/src/main/java/ru/job4j/tictactoe/Figure3T.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tictactoe/src/main/java/ru/job4j/tictactoe/Logic3T.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tictactoe/src/main/java/ru/job4j/tictactoe/TicTacToe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tictactoe/src/test/java/ru/job4j/tictactoe/Logic3TTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,8 +39,8 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tictactoe/src/main/java" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
@@ -45,6 +50,7 @@
       <recent name="ru.job4j.calculate" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\projects\job4j\tictactoe\src\main\java" />
       <recent name="C:\projects\job4j\chapter_001\src\main\java\ru\job4j\condition" />
     </key>
   </component>
@@ -60,21 +66,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CountTest.whenListContainsNegativeNumbers">
-    <configuration name="Count" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.job4j.count.Count" />
-      <module name="chapter_004" />
-      <option name="VM_PARAMETERS" value="--module-path c:\Tools\javafx-sdk-11.0.2\lib\ --add-modules=javafx.controls,javafx.fxml" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.job4j.count.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.Logic3TTest">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="ru.job4j.puzzle.Puzzle" />
       <option name="VM_PARAMETERS" value="--module-path c:\Tools\javafx-sdk-11.0.2\lib\ --add-modules=javafx.controls,javafx.fxml" />
@@ -82,64 +74,80 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConvertMatrix2ListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="chapter_003" />
+    <configuration name="Logic3TTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tictactoe" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.job4j.list.*" />
+          <option name="PATTERN" value="ru.job4j.tictactoe.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.job4j.list" />
-      <option name="MAIN_CLASS_NAME" value="ru.job4j.list.ConvertMatrix2ListTest" />
+      <option name="PACKAGE_NAME" value="ru.job4j.tictactoe" />
+      <option name="MAIN_CLASS_NAME" value="ru.job4j.tictactoe.Logic3TTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CountTest.check" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="chapter_004" />
+    <configuration name="Logic3TTest.whenHasODiagonalWinner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tictactoe" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.job4j.count.*" />
+          <option name="PATTERN" value="ru.job4j.tictactoe.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.job4j.count" />
-      <option name="MAIN_CLASS_NAME" value="ru.job4j.count.CountTest" />
-      <option name="METHOD_NAME" value="check" />
+      <option name="PACKAGE_NAME" value="ru.job4j.tictactoe" />
+      <option name="MAIN_CLASS_NAME" value="ru.job4j.tictactoe.Logic3TTest" />
+      <option name="METHOD_NAME" value="whenHasODiagonalWinner" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CountTest.whenListContainOnlyOddNumsThen0" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="chapter_004" />
+    <configuration name="Logic3TTest.whenHasOHorizontalWinner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tictactoe" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.job4j.count.*" />
+          <option name="PATTERN" value="ru.job4j.tictactoe.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.job4j.count" />
-      <option name="MAIN_CLASS_NAME" value="ru.job4j.count.CountTest" />
-      <option name="METHOD_NAME" value="whenListContainOnlyOddNumsThen0" />
+      <option name="PACKAGE_NAME" value="ru.job4j.tictactoe" />
+      <option name="MAIN_CLASS_NAME" value="ru.job4j.tictactoe.Logic3TTest" />
+      <option name="METHOD_NAME" value="whenHasOHorizontalWinner" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CountTest.whenListContainsNegativeNumbers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="chapter_004" />
+    <configuration name="Logic3TTest.whenHasOVerticalWinner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tictactoe" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.job4j.count.*" />
+          <option name="PATTERN" value="ru.job4j.tictactoe.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.job4j.count" />
-      <option name="MAIN_CLASS_NAME" value="ru.job4j.count.CountTest" />
-      <option name="METHOD_NAME" value="whenListContainsNegativeNumbers" />
+      <option name="PACKAGE_NAME" value="ru.job4j.tictactoe" />
+      <option name="MAIN_CLASS_NAME" value="ru.job4j.tictactoe.Logic3TTest" />
+      <option name="METHOD_NAME" value="whenHasOVerticalWinner" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Logic3TTest.whenHasOWinner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tictactoe" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.job4j.tictactoe.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.job4j.tictactoe" />
+      <option name="MAIN_CLASS_NAME" value="ru.job4j.tictactoe.Logic3TTest" />
+      <option name="METHOD_NAME" value="whenHasOWinner" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -163,19 +171,19 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.MatrixCheckTest.whenDataTwoMonoFalseXTrueThenTrue" />
-      <item itemvalue="JUnit.ConvertMatrix2ListTest" />
-      <item itemvalue="Application.Count" />
-      <item itemvalue="JUnit.CountTest.check" />
-      <item itemvalue="JUnit.CountTest.whenListContainOnlyOddNumsThen0" />
-      <item itemvalue="JUnit.CountTest.whenListContainsNegativeNumbers" />
+      <item itemvalue="JUnit.Logic3TTest" />
+      <item itemvalue="JUnit.Logic3TTest.whenHasOWinner" />
+      <item itemvalue="JUnit.Logic3TTest.whenHasOHorizontalWinner" />
+      <item itemvalue="JUnit.Logic3TTest.whenHasOVerticalWinner" />
+      <item itemvalue="JUnit.Logic3TTest.whenHasODiagonalWinner" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CountTest.whenListContainsNegativeNumbers" />
-        <item itemvalue="JUnit.CountTest.whenListContainOnlyOddNumsThen0" />
-        <item itemvalue="JUnit.CountTest.check" />
-        <item itemvalue="Application.Count" />
-        <item itemvalue="JUnit.ConvertMatrix2ListTest" />
+        <item itemvalue="JUnit.Logic3TTest" />
+        <item itemvalue="JUnit.Logic3TTest.whenHasODiagonalWinner" />
+        <item itemvalue="JUnit.Logic3TTest.whenHasOVerticalWinner" />
+        <item itemvalue="JUnit.Logic3TTest.whenHasOHorizontalWinner" />
+        <item itemvalue="JUnit.Logic3TTest.whenHasOWinner" />
       </list>
     </recent_temporary>
   </component>
