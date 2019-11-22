@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="798c4cbd-f878-4f2d-bb35-de107d8edf88" name="Default Changelist" comment="use of objects in Point.java &amp; PointTest.java">
-      <change afterPath="$PROJECT_DIR$/tictactoe/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tictactoe/src/main/java/ru/job4j/tictactoe/Figure3T.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tictactoe/src/main/java/ru/job4j/tictactoe/Logic3T.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tictactoe/src/main/java/ru/job4j/tictactoe/TicTacToe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tictactoe/src/test/java/ru/job4j/tictactoe/Logic3TTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tictactoe/src/main/java/ru/job4j/tictactoe/Figure3T.java" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoe/src/main/java/ru/job4j/tictactoe/Figure3T.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tictactoe/src/main/java/ru/job4j/tictactoe/Logic3T.java" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoe/src/main/java/ru/job4j/tictactoe/Logic3T.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -137,7 +132,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Logic3TTest.whenHasOWinner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Logic3TTest.whenHasXBackDiagonalWinner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tictactoe" />
       <extension name="coverage">
         <pattern>
@@ -147,7 +142,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="ru.job4j.tictactoe" />
       <option name="MAIN_CLASS_NAME" value="ru.job4j.tictactoe.Logic3TTest" />
-      <option name="METHOD_NAME" value="whenHasOWinner" />
+      <option name="METHOD_NAME" value="whenHasXBackDiagonalWinner" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -172,18 +167,18 @@
     <list>
       <item itemvalue="JUnit.MatrixCheckTest.whenDataTwoMonoFalseXTrueThenTrue" />
       <item itemvalue="JUnit.Logic3TTest" />
-      <item itemvalue="JUnit.Logic3TTest.whenHasOWinner" />
       <item itemvalue="JUnit.Logic3TTest.whenHasOHorizontalWinner" />
       <item itemvalue="JUnit.Logic3TTest.whenHasOVerticalWinner" />
       <item itemvalue="JUnit.Logic3TTest.whenHasODiagonalWinner" />
+      <item itemvalue="JUnit.Logic3TTest.whenHasXBackDiagonalWinner" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.Logic3TTest" />
+        <item itemvalue="JUnit.Logic3TTest.whenHasXBackDiagonalWinner" />
         <item itemvalue="JUnit.Logic3TTest.whenHasODiagonalWinner" />
         <item itemvalue="JUnit.Logic3TTest.whenHasOVerticalWinner" />
         <item itemvalue="JUnit.Logic3TTest.whenHasOHorizontalWinner" />
-        <item itemvalue="JUnit.Logic3TTest.whenHasOWinner" />
       </list>
     </recent_temporary>
   </component>
