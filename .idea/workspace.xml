@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="798c4cbd-f878-4f2d-bb35-de107d8edf88" name="Default Changelist" comment="use of objects in Point.java &amp; PointTest.java">
+      <change afterPath="$PROJECT_DIR$/chapter_005/src/main/java/ru/job4j/iterator/EvenIterator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chapter_005/src/test/java/ru/job4j/iterator/EvenIteratorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tictactoe/src/main/java/ru/job4j/tictactoe/Logic3T.java" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoe/src/main/java/ru/job4j/tictactoe/Logic3T.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,6 +46,7 @@
       <recent name="C:\projects\job4j\chapter_005\src\test\java\ru\job4j" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="ru.job4j.iterator" />
       <recent name="ru.job4j.calculate" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -64,7 +66,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Logic3TTest">
+  <component name="RunManager" selected="JUnit.EvenIteratorTest.whenContainsOneEvenElement">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="ru.job4j.puzzle.Puzzle" />
       <option name="VM_PARAMETERS" value="--module-path c:\Tools\javafx-sdk-11.0.2\lib\ --add-modules=javafx.controls,javafx.fxml" />
@@ -72,17 +74,49 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JaggedArrayIteratorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EvenIteratorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="chapter_005" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.job4j.*" />
+          <option name="PATTERN" value="ru.job4j.iterator.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.job4j" />
-      <option name="MAIN_CLASS_NAME" value="ru.job4j.JaggedArrayIteratorTest" />
+      <option name="PACKAGE_NAME" value="ru.job4j.iterator" />
+      <option name="MAIN_CLASS_NAME" value="ru.job4j.iterator.EvenIteratorTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EvenIteratorTest.allNumbersAre" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="chapter_005" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.job4j.iterator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.job4j.iterator" />
+      <option name="MAIN_CLASS_NAME" value="ru.job4j.iterator.EvenIteratorTest" />
+      <option name="METHOD_NAME" value="allNumbersAre" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EvenIteratorTest.whenContainsOneEvenElement" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="chapter_005" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.job4j.iterator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.job4j.iterator" />
+      <option name="MAIN_CLASS_NAME" value="ru.job4j.iterator.EvenIteratorTest" />
+      <option name="METHOD_NAME" value="whenContainsOneEvenElement" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -98,22 +132,6 @@
       <option name="PACKAGE_NAME" value="ru.job4j.tictactoe" />
       <option name="MAIN_CLASS_NAME" value="ru.job4j.tictactoe.Logic3TTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Logic3TTest.whenHasXBackDiagonalWinner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tictactoe" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.job4j.tictactoe.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.job4j.tictactoe" />
-      <option name="MAIN_CLASS_NAME" value="ru.job4j.tictactoe.Logic3TTest" />
-      <option name="METHOD_NAME" value="whenHasXBackDiagonalWinner" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -149,37 +167,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MatrixIteratorTest.testsThatNextMethodDoesntDependsOnPriorHasNextInvocation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="chapter_005" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.job4j.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.job4j" />
-      <option name="MAIN_CLASS_NAME" value="ru.job4j.MatrixIteratorTest" />
-      <option name="METHOD_NAME" value="testsThatNextMethodDoesntDependsOnPriorHasNextInvocation" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="JUnit.MatrixCheckTest.whenDataTwoMonoFalseXTrueThenTrue" />
       <item itemvalue="JUnit.Logic3TTest" />
-      <item itemvalue="JUnit.Logic3TTest.whenHasXBackDiagonalWinner" />
-      <item itemvalue="JUnit.JaggedArrayIteratorTest" />
       <item itemvalue="JUnit.MatrixIteratorTest" />
-      <item itemvalue="JUnit.MatrixIteratorTest.testsThatNextMethodDoesntDependsOnPriorHasNextInvocation" />
+      <item itemvalue="JUnit.EvenIteratorTest" />
+      <item itemvalue="JUnit.EvenIteratorTest.allNumbersAre" />
+      <item itemvalue="JUnit.EvenIteratorTest.whenContainsOneEvenElement" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.EvenIteratorTest.whenContainsOneEvenElement" />
+        <item itemvalue="JUnit.EvenIteratorTest.allNumbersAre" />
+        <item itemvalue="JUnit.EvenIteratorTest" />
         <item itemvalue="JUnit.Logic3TTest" />
         <item itemvalue="JUnit.MatrixIteratorTest" />
-        <item itemvalue="JUnit.MatrixIteratorTest.testsThatNextMethodDoesntDependsOnPriorHasNextInvocation" />
-        <item itemvalue="JUnit.JaggedArrayIteratorTest" />
-        <item itemvalue="JUnit.Logic3TTest.whenHasXBackDiagonalWinner" />
       </list>
     </recent_temporary>
   </component>
