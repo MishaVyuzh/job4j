@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="798c4cbd-f878-4f2d-bb35-de107d8edf88" name="Default Changelist" comment="use of objects in Point.java &amp; PointTest.java">
-      <change afterPath="$PROJECT_DIR$/chapter_005/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter_005/src/main/java/ru/job4j/iterator/MatrixIterator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter_005/src/test/java/ru/job4j/JaggedArrayIteratorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter_005/src/test/java/ru/job4j/MatrixIteratorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tictactoe/src/main/java/ru/job4j/tictactoe/Logic3T.java" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoe/src/main/java/ru/job4j/tictactoe/Logic3T.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +64,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MatrixIteratorTest">
+  <component name="RunManager" selected="JUnit.Logic3TTest">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="ru.job4j.puzzle.Puzzle" />
       <option name="VM_PARAMETERS" value="--module-path c:\Tools\javafx-sdk-11.0.2\lib\ --add-modules=javafx.controls,javafx.fxml" />
@@ -179,10 +175,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Logic3TTest" />
         <item itemvalue="JUnit.MatrixIteratorTest" />
         <item itemvalue="JUnit.MatrixIteratorTest.testsThatNextMethodDoesntDependsOnPriorHasNextInvocation" />
         <item itemvalue="JUnit.JaggedArrayIteratorTest" />
-        <item itemvalue="JUnit.Logic3TTest" />
         <item itemvalue="JUnit.Logic3TTest.whenHasXBackDiagonalWinner" />
       </list>
     </recent_temporary>

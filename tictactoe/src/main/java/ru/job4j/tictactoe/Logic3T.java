@@ -40,11 +40,13 @@ class Logic3T {
      */
     private boolean searchFill(Predicate<Figure3T> predicate) {
         boolean result = false;
+        if (fillBy(predicate, 0, 0, 1, 1)
+                || fillBy(predicate, 2, 0, -1, 1)) {
+            result = true;
+        }
         for (int pos = 0; pos < table.length; pos++) {
             if (fillBy(predicate, pos, 0, 0, 1)
-                    || fillBy(predicate, 0, pos, 1, 0)
-                    || fillBy(predicate, 0, 0, 1, 1)
-                    || fillBy(predicate, 2, 0, -1, 1)) {
+                    || fillBy(predicate, 0, pos, 1, 0)) {
                 result = true;
             }
         }

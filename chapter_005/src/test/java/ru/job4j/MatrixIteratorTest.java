@@ -11,7 +11,7 @@ public class MatrixIteratorTest {
 
     @Test
     public void whenArraysContainsFourDifferentLengthBlocksThenOrderFrom1To14() {
-        it = new MatrixIterator(new int[][]{{1}, {2, 3, 4, 5,}, {6, 7}, {8, 9, 10, 11, 12, 13, 14}});
+        it = new MatrixIterator(new int[][]{{1}, {2, 3, 4, 5}, {6, 7}, {8, 9, 10, 11, 12, 13, 14}});
 
         assertThat(it.next(), is(1));
         assertThat(it.next(), is(2));
