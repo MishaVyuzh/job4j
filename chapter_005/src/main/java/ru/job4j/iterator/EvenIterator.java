@@ -3,7 +3,7 @@ package ru.job4j.iterator;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class EvenIterator implements Iterator {
+public class EvenIterator implements Iterator<Integer> {
     private final int[] numbers;
     private int index;
 
@@ -30,7 +30,7 @@ public class EvenIterator implements Iterator {
     }
 
     @Override
-    public Object next() {
+    public Integer next() {
         if (!hasNext()) {
             throw new NoSuchElementException("The array does not contain even numbers.");
         }
