@@ -1,7 +1,5 @@
 package ru.job4j.generic;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
@@ -9,9 +7,9 @@ public class SimpleArray<T> implements Iterable<T> {
     private T[] array;
     private int currentIndex;
 
-    SimpleArray(Class t, int size) {
-        this.array = (T[]) Array.newInstance(t, size);
-        currentIndex = 0;
+    @SuppressWarnings("unchecked")
+    SimpleArray(int size) {
+        this.array = (T[]) new Object[size];
     }
 
     void add(T model) {
@@ -19,11 +17,8 @@ public class SimpleArray<T> implements Iterable<T> {
     }
 
     void set(int index, T model) {
-        if (this.array[index] == null) {
-            add(model);
-        } else {
-            this.array[index] = model;
-            currentIndex++;
+        if (index < currentIndex) {
+            array[index] = model;
         }
     }
 
@@ -35,10 +30,6 @@ public class SimpleArray<T> implements Iterable<T> {
 
     T get(int index) {
         return this.array[index];
-    }
-
-    T[] getArray() {
-        return Arrays.copyOf(this.array, this.currentIndex);
     }
 
     @Override
