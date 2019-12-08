@@ -1,5 +1,7 @@
 package ru.job4j.generic;
 
+import java.util.NoSuchElementException;
+
 public class AbstractStore<T extends Base> implements Store<T> {
     private SimpleArray<T> simpleArray;
 
@@ -26,10 +28,11 @@ public class AbstractStore<T extends Base> implements Store<T> {
     @Override
     public boolean delete(String id) {
         boolean result = false;
-        simpleArray.remove(findIndexById(id));
-
-        if (findIndexById(id) == -1) {
+        try {
+            simpleArray.remove(findIndexById(id));
             result = true;
+        } catch (NoSuchElementException e) {
+            e.getMessage();
         }
         return result;
     }
