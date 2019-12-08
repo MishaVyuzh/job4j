@@ -8,7 +8,7 @@ public class SimpleArray<T> implements Iterable<T> {
     private int currentIndex;
 
     @SuppressWarnings("unchecked")
-    SimpleArray(int size) {
+    public SimpleArray(int size) {
         this.array = (T[]) new Object[size];
     }
 
